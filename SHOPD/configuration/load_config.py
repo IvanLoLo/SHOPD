@@ -7,7 +7,8 @@ __failFlag = False
 
 #Load and read local config
 try:
-    LOCAL = os.path.dirname(os.path.dirname(__file__))
+    LOCAL = os.path.dirname(__file__)
+    print(LOCAL)
     CONFIG_FILE = open(os.path.join(LOCAL, 'config.yaml'))
     CONFIG = yaml.load(CONFIG_FILE, Loader=yaml.FullLoader)
 except Exception as e:
